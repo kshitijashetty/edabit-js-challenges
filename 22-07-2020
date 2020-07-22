@@ -1,0 +1,94 @@
+[Number of Arrays in an Array](https://edabit.com/challenge/TwJghdCGSbDywLZz7)
+```javascript
+function numOfSubbarrays(arr) {
+	return arr.reduce((s,x)=>typeof(x)!="number"?s+=1:s,0)
+}
+```
+
+[RegEx XIV: Group Ranges x|y](https://edabit.com/challenge/7KbZc8QvzqrJPaE6Q)
+```javascript
+const REGEXP = /\w*red flag|blue flag\w*/g
+```
+
+RegEx XVII : Quantifiers - x{n}, x{n,}, x{n,}](https://edabit.com/challenge/5vsYNXXQ7aXzQMMpQ)
+```javascript
+const REGEXP = /\.{3,}/g;
+```
+
+[RegEx: Boundary Assertions I](https://edabit.com/challenge/AWENJSwyhcceiKvQX)
+```javascript
+function isJS(path) {
+	return (path.split('.')[1]=='js' || path.split('.')[1]=='jsx')?true:false;
+}
+```
+
+[RegEx XV : Group Ranges - Negated Character Sets](https://edabit.com/challenge/rHtS59yApEQbANPcx)
+```javascript
+const REGEXP = /[^a-z^0-9]/gi
+```
+
+[How Many Vowels?](https://edabit.com/challenge/3EQGHyiYTNc9LPmhF)
+```javascript
+function countVowels(str) {
+	return str.split("").filter(x=>["a","e","i","o","u"].includes(x)).length;
+}
+```
+
+
+[Regex Series: Even Number?](https://edabit.com/challenge/pQh6uEM2Dp3BjAyzS)
+```javascript
+let x = /^[0-9]*[02468]$/
+```
+
+[Remove Every Vowel from a String](https://edabit.com/challenge/DbLp2kHgwQbridSSy)
+```javascript
+function removeVowels(str) {
+	return str.replace(/[aeiou]/gi, '');
+}
+```
+
+
+[Hashes and Pluses](https://edabit.com/challenge/ydBcGvv3n447nbxCy)
+```javascript
+function hashPlusCount(str) {
+	return [[...str].filter(x=>x=="#").length, [...str].filter(x=>x=="+").length];
+}
+```
+
+[Match the Last Item](https://edabit.com/challenge/jbR9NupEL8zAZkbKx)
+```javascript
+function matchLastItem(arr) {
+	return arr.slice(0,arr.length-1).join("") == arr[arr.length-1];
+}
+```
+
+[RegEx: Character Classes XI ⁠- \S](https://edabit.com/challenge/6Zs9AyraoFAAEhX6v)
+```javascript
+const REGEXP = /[^ ]\S$/g
+```javascript
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
+
+
