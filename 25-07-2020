@@ -1,0 +1,46 @@
+
+[Verbed Nouns](https://edabit.com/challenge/R7g5N9rscC6jgec5G)
+```javascript
+function verbify(str) {
+	let w1 = str.split(" ")[0];
+	let w2 = str.split(" ")[1];
+	return (/ed$/.test(w1)?w1 + " ":/e$/.test(w1)? w1 + "d ":w1 +"ed ") + w2;
+}
+```
+
+[Trace That Matrix](https://edabit.com/challenge/humnHvXGXnBnStg5F)
+```javascript
+function trace(arr) {
+	return arr.map((x,i)=>x.filter((y, j)=>i==j)).flat(Infinity).reduce((s,z)=>s+=z,0);
+}
+//Optimized Solution
+const trace = arr => arr.reduce((a, e, i) => a + e[i], 0);
+```
+
+[What's Hiding Amongst the Crowd?](https://edabit.com/challenge/rvsvGvqZ3BzNieKqA)
+```javascript
+function detectWord(str) {
+	return [...str].filter(x=>x.toLowerCase()==x).join("");
+}
+```
+
+[Sum of Found Indexes](https://edabit.com/challenge/TTu48ECaTRwZDj69x)
+```javascript
+function sumFoundIndexes(arr, n) {
+	return arr.reduce((s,x,i)=>x===n?s+=i:s,0);
+}
+```
+
+[Even All the Way](https://edabit.com/challenge/6MZx5RqKYkFaogeAQ)
+```javascript
+function getOnlyEvens(nums) {
+	return nums.filter((x,i)=>x%2==0&&i%2==0);
+}
+```
+
+[Pythagorean Triplet](https://edabit.com/challenge/qfAvihoTKivTuzapt)
+```javascript
+function isTriplet(n1, n2, n3) {
+	return Math.max(n1,n2,n3)**2 == [n1,n2,n3].sort((a,b)=>a-b).slice(0,-1).reduce((s,x)=>s = s + x**2,0);
+}
+```
