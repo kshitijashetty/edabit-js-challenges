@@ -1,0 +1,124 @@
+
+[Chocolate Dilemma](https://edabit.com/challenge/SLsJZd8EzW8nDoT5f)
+```javascript
+function testFairness(agatha, bertha) {
+	return agatha.map(x=>x.reduce((p,y)=>p*y)).reduce((s,z)=>s+z,0) === bertha.map(x=>x.reduce((p,y)=>p*y)).reduce((s,z)=>s+z,0);
+}
+//Optimal solution 
+function testFairness(agatha, bertha) {
+	return agatha.reduce((a,c) => a += c[0] * c[1], 0) ==
+         bertha.reduce((a,c) => a += c[0] * c[1], 0)
+}
+```
+
+[Numbered Cards](https://edabit.com/challenge/JMht24XNt8Swf4MRL)
+```javascript
+function winRound(you, opp) {
+	return Number(you.sort((a,b)=>b-a).slice(0,2).join('')) > Number(opp.sort((a,b)=>b-a).slice(0,2).join(''));
+}
+```
+
+[In the Centre?](https://edabit.com/challenge/EatpBWKGDGvntrMmo)
+```javascript
+function isCentral(str) {
+	let arr_len = str.split(/[\w\d`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi).map(x=>x.length)
+	return arr_len[0] == arr_len[1];
+}
+//Optimal solution - Without using arrays or split 
+function isCentral(str) {
+	return str.trimLeft().length === str.trimRight().length
+}
+```
+
+[Mini Peaks](https://edabit.com/challenge/jJmSKcXeYWC3pTjBT)
+```javascript
+function miniPeaks(arr) {
+	return arr.filter((x,i)=>i!=0||i!=arr.length-1?x>arr[i-1]&&x>arr[i+1]:'');
+}
+```
+
+[Days in a Month](https://edabit.com/challenge/wNhCHwPXNLJwrTith)
+```javascript
+function days(month, year) {
+	return new Date(year, month, 0).getDate();
+}
+```
+
+[One Button Messaging Device](https://edabit.com/challenge/TEvX5dzA4RS7ZLtxe)
+```javascript
+function howManyTimes(msg) {
+	let arr_alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+	return [...msg].reduce((s,x)=>s+arr_alpha.indexOf(x)+1,0)
+}
+```
+
+[Simon Says](https://edabit.com/challenge/i7gQkdYrx4yyW7uLp)
+```javascript
+function simonSays(arr1, arr2) {
+	return arr1.filter((x,i)=>Math.abs(x-arr2[i]) == 1).length >= 1;
+}
+```
+
+[Removing Enemies](https://edabit.com/challenge/maTTAmN9j8creL4Jq)
+```javascript
+function removeEnemies(names, enemies) {
+	return names.filter(x=>!enemies.includes(x))
+}
+```
+
+[Puzzle Pieces](https://edabit.com/challenge/Zu4LyLXhd9e49krFP)
+```javascript
+function puzzlePieces(a1, a2) {
+	return a1.length==a2.length?new Set(a1.map((x,i)=>x+a2[i])).size==1:false;
+}
+```
+
+[Ping Pong](https://edabit.com/challenge/S7oxczk4Rtu99kaZ8)
+```javascript
+function pingPong(arr, win) {
+	let arr_res = arr.join(' ').replace(/\s/g," Pong! ").split(' ');
+	win?arr_res.push("Pong!"):arr_res;
+	return arr_res;
+}
+```
+
+[GCD and LCM ( Part 1)](https://edabit.com/challenge/M7PGwcinRM9ntmqPS)
+[GCD of Two Numbers](https://edabit.com/challenge/3HPSLLjh8Go5QPq3C)
+```javascript
+function gcd(a, b) {
+  return !b ? a : gcd(b, a % b);
+}
+```
+
+[Switcharoo](https://edabit.com/challenge/2dcXsuTD68iRK5MiT)
+```javascript
+function flipEndChars(str) {
+	return str.length&&typeof(str)=="string"&&str[str.length-1] == str[0]?"Two's a pair.":str.length==0 || typeof(str)!="string"?"Incompatible.":str[str.length-1] + str.slice(1,-1) + str[0];
+}
+```
+
+[Is There an Upward Trend?](https://edabit.com/challenge/X3JBqvoG5aq38Dc38)
+```javascript
+function upwardTrend(arr) {
+	let arr_unsort = [...arr];
+	let arr_sort = [...arr.sort()];
+	let arr_fil = [...arr_unsort.filter(x=>typeof(x)=="number")];
+	return arr_fil.length === arr.length?JSON.stringify(arr_unsort) === JSON.stringify(arr_sort):'Strings not permitted!';
+}
+//Optimal solution
+const upwardTrend = arr => 
+	arr.some(x => typeof x === "string")? "Strings not permitted!" 
+	: arr.slice(1).every((x, i) => x > arr[i]);
+```
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
+
+[]()
+```javascript
+```
