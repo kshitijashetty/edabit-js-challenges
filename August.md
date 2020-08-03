@@ -115,12 +115,20 @@ function unrepeated(str) {
 }
 ```
 
-[]()
+[The Museum of Incredibly DULL Things](https://edabit.com/challenge/9ukwiKyv8R9NHSt3d)
 ```javascript
+function removeSmallest(arr) {
+	let index = arr.indexOf(Math.min(...arr));
+	arr.splice(index, 1);
+	return arr.length?arr:[];
+}
 ```
 
-[]()
+[Check if a String is a Mathematical Expression](https://edabit.com/challenge/YREKdhk9gK5HByM7r)
 ```javascript
+function mathExpr(expr) {
+	return [...expr].filter(Number).length==2?true:false;
+}
 ```
 
 []()
