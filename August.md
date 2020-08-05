@@ -131,32 +131,63 @@ function mathExpr(expr) {
 }
 ```
 
-[]()
+[Abbreviating a Sentence](https://edabit.com/challenge/ktqDpdPrFApaQpcCi)
 ```javascript
+function abbreviate(sentence, n) {
+	n = n?n:4;
+	return sentence.split(" ").filter(x=>x.length>=n).map(x=>x[0].toUpperCase()).join("");
+}
 ```
 
-[]()
+[Calculate the Shortest Distance Between Two Points](https://edabit.com/challenge/W6H4Bcaiu6svso7vT)
 ```javascript
+function shortestDistance(str) {
+	let arr = str.split(",");
+	return +Math.sqrt((arr[2] - arr[0])**2 + (arr[3]-arr[1])**2).toFixed(2);
+}
 ```
 
-[]()
+[Sum of all Evens in a Matrix](https://edabit.com/challenge/yiMSg6cNNCeJDQo3b)
 ```javascript
+function sumOfEvens(arr) {
+	return arr.flat(Infinity).reduce((s,x)=>x%2==0?s+x:s,0);
+}
 ```
 
-[]()
+[Distance Between Two Points](https://edabit.com/challenge/caeSeQ3K53GMQKenX)
 ```javascript
+function getDistance(a, b) {
+	return +Math.sqrt((b.x - a.x)**2 + (b.y - a.y)**2).toFixed(3);
+}
 ```
 
-[]()
+[Compound Interest](https://edabit.com/challenge/2GmmGPrktkTzTthdB)
 ```javascript
+function compoundInterest(p, t, r, n) {
+	return +(p* Math.pow((1 + (r/(n))), (n*t))).toFixed(2);
+}
 ```
 
-[]()
+[Count the Towers](https://edabit.com/challenge/LcEFe7PsxTqciY62v)
 ```javascript
+function countTowers(towers) {
+	return Math.max(...towers.map(x=>x.map(y=>y.replace(/[ ]/g,"").length/2)).flat(1));
+}
 ``````
 
-[]()
+[Malthusian Catastrophe](https://edabit.com/challenge/4BeTkEwBXeuSKJTYe)
 ```javascript
+function malthusian(foodGrowth, popMult) {
+	var population = 100;
+	var food = 100;
+	var year = 0;
+	do{
+		food += foodGrowth;
+		population *= popMult;
+		year++;
+	}while(food>population)
+	return year;
+}
 ```
 
 []()
