@@ -190,12 +190,18 @@ function malthusian(foodGrowth, popMult) {
 }
 ```
 
-[]()
+[The Million Dollar Fence](https://edabit.com/challenge/kKcEHvyJemCPKkjPZ)
 ```javascript
+function constructFence(price) {
+	return new Array(1000000/(+price.split("$")[1].replace(/,/g,''))).fill('H').join('');
+}
 ```
 
-[]()
+[Valid Hex Code](https://edabit.com/challenge/cWvYKp8JTE9ozC6NF)
 ```javascript
+function isValidHexCode(str) {
+	return /^#([0-9A-F]){6}$/i.test(str);
+}
 ```
 
 []()
