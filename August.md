@@ -204,28 +204,47 @@ function isValidHexCode(str) {
 }
 ```
 
-[]()
+[Capitalize the Last Letter](https://edabit.com/challenge/WrXmsGDGxqkjNCZtw)
 ```javascript
+function capLast(txt) {
+	return txt.split(" ").map(x=>x.slice(0, x.length - 1) + x[x.length-1].toUpperCase()).join(" ");
+}
 ```
 
-[]()
+[Is One Array a Subset of Another?](https://edabit.com/challenge/3ymGugubc4gTfcqcR)
 ```javascript
+function isSubset(arr1, arr2) {
+	return arr1.every(x=>arr2.indexOf(x)!==-1);
+}
 ```
 
-[]()
+[Return the Index of All Capital Letters](https://edabit.com/challenge/cRAqXCgyYnjdgktEq)
 ```javascript
+function indexOfCaps(str) {
+	return [...str].map((x,i)=>i).filter((y)=>[...str][y] === [...str][y].toUpperCase() && /^[A-za-z]*$/.test([...str][y]));
+}
 ```
 
-[]()
+[Functioninator 8000](https://edabit.com/challenge/xpGPz3QCAhtsZrWeW)
 ```javascript
+function inatorInator(inv) {
+	return /[^AEIOU]$/i.test(inv)?inv+'inator '+inv.length+'000':inv+'-inator '+inv.length+'000';
+}
 ```
 
-[]()
+[Rectangle in Circle](https://edabit.com/challenge/Qqo3rXrDEQ6kc4PqR)
 ```javascript
+function rectangleInCircle(w, h, radius) {
+	return Math.sqrt(w**2 + h**2) < 2*radius;
+}
 ```
 
-[]()
+[First N Vowels](https://edabit.com/challenge/2FBEMqxiZ2z9efgQB)
 ```javascript
+function firstNVowels(s, n) {
+	let arr = [...s].filter(x=>x.match(/[AEIOU]/i));
+	return n<=arr.length?arr.slice(0,n).join(""):"invalid";
+}
 ```
 
 []()
