@@ -247,8 +247,13 @@ function firstNVowels(s, n) {
 }
 ```
 
-[]()
+[Returning an "Add" Function](https://edabit.com/challenge/xtv5ZT7xDsHyrshTq)
 ```javascript
+function add(n) {
+	return function(m){
+		return m+n;
+	}
+}
 ```
 
 []()
