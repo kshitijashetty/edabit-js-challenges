@@ -256,28 +256,55 @@ function add(n) {
 }
 ```
 
-[]()
+[ES6: Destructuring Objects VI](https://edabit.com/challenge/7yCojzi2ye2Fn6iQT)
 ```javascript
+const str = `
+function shirtSize({size = "big"}={}) { 
+  return size;
+}
+`
 ```
 
-[]()
+[RegEx: Character Classes XII ⁠- \t](https://edabit.com/challenge/w2abzEMHE7SFLQzDq)
 ```javascript
+const REGEXP = /\t /g
 ```
 
-[]()
+[Syncopated Rhythm](https://edabit.com/challenge/9JGd2TFCb33SQ2rhL)
 ```javascript
+function hasSyncopation(s) {
+	var fil = s.split("#").filter(x=>x!='' && x!= '.');
+	return /.#/g.test(s)?fil.length==0?true:fil.filter(x=>x.length%2==0).length>0:false
+}
 ```
 
-[]()
+[Compounding Letters](https://edabit.com/challenge/aThG46eyi9LhGdTFY)
 ```javascript
+function accum(str) {
+	return [...str].map((x,i)=>x.toUpperCase() + x.repeat(i).toLowerCase()).join("-");
+}
 ```
 
-[]()
+[ES6: Destructuring Objects X](https://edabit.com/challenge/sWzEwh5cXaAY7yEoo)
 ```javascript
+let names = []
+
+let users = [
+  { name: "John", email: "john@example.com" },
+  { name: "Jason", email: "jason@example.com" },
+  { name: "Jeremy", email: "jeremy@example.com" },
+  { name: "Jacob", email: "jacob@example.com" }
+] 
+
+const str = `
+	for(let {name} of users) {
+			names.push(name)
+	}`
 ```
 
-[]()
+[ES6: Destructuring Arrays V](https://edabit.com/challenge/gMXdPQQbMdws8fTxC)
 ```javascript
+const str = `[,protocol,host,path] = parsedURL`
 ```
 
 []()
