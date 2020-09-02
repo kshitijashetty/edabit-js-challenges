@@ -307,20 +307,36 @@ const str = `
 const str = `[,protocol,host,path] = parsedURL`
 ```
 
-[]()
+[Number of Boomerangs](https://edabit.com/challenge/b7iHQDw72zzkmgCun)
 ```javascript
+function countBoomerangs(arr) {
+	return arr.filter((x,i)=>i<arr.length-2 && x==arr[i+2] && x!=arr[i+1] && arr[i+1]!=arr[i+2]).length;
+}
 ```
 
-[]()
+[ES6: Destructuring Objects IV](https://edabit.com/challenge/JQRbpfn6WpEksA2tu)
 ```javascript
+const str = `({ first = "John", last = "Doe", alias:nickname="JD"} = { first: "James", last: "Baker" }).toString()`
 ```
 
-[]()
+[Sort the Unsortable](https://edabit.com/challenge/zemLfbNWaKuhrbJPt)
 ```javascript
+function sortIt(arr) {
+	var arr_tmp = arr;
+	return arr.flat(Infinity).sort((a,b)=>a-b).map((x,i)=>arr_tmp.includes(x)?x:[x]);
+}
+Optimal Solution
+function sortIt(arr) {
+  return arr.sort((a, b) => a - b);
+}
 ``````
 
-[]()
+[Burglary Series (01): Calculate Total Losses](https://edabit.com/challenge/pLNavsePxJ87t9Nak)
 ```javascript
+function calculateLosses(obj) {
+	var sum = Object.values(obj).reduce((s,x)=>s+x,0); 
+	return sum?sum:'Lucky you!';
+}
 ```
 
 []()
