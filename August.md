@@ -339,24 +339,46 @@ function calculateLosses(obj) {
 }
 ```
 
-[]()
+[Peeling off the Outer Layers](https://edabit.com/challenge/mQznJjH2mtaybMCG8)
 ```javascript
+function peelLayerOff(arr) {
+	var arr_tmp = arr.filter((x,i)=>i!=0&&i!=arr.length-1);
+	return arr_tmp.map(y=>y.filter((z,j)=>j!=0&&j!=arr[0].length-1));
+}
+Optimal solution 
+const peelLayerOff = r => r.slice(1,-1).map(c => c.slice(1,-1))
 ```
 
-[]()
+[Narcissistic Numbers](https://edabit.com/challenge/wNh9NaWY6EvA7sPDQ)
 ```javascript
+function isNarcissistic(n) {
+	return [...n.toString()].reduce((s,x)=>s+(Number(x)**[...n.toString()].length),0) == n;
+}
 ```
 
-[]()
+[Rock, Paper, Scissors!](https://edabit.com/challenge/jtvCv6cjHorKpmyFc)
 ```javascript
+function calculateScore(games) {
+	var obj={'P':'R','R':'S','S':'P'};
+	var p1 = games.map(x=>x[0]==x[1]||obj[x[0]] == x[1]).filter(a=>a==true).length;
+	var p2 = games.map(y=>y[1]==y[0]||obj[y[1]] == y[0]).filter(b=>b==true).length;
+	return p1==p2?'Tie':p1>p2?'Abigail':'Benson';
+}
 ```
 
-[]()
+[How Many Days Between Two Dates](https://edabit.com/challenge/3hdXjfJozQySRC3gE)
 ```javascript
-```
-
-[]()
+function getDays(date1, date2) {
+	return (date2-date1)/86400000;
+}
+``
+[Vowel to Vowel Links](https://edabit.com/challenge/byCrFXYokKujSebsD)
 ```javascript
+function vowelLinks(str) {
+	var arr = str.split(" ").map(x=>[...x]);
+	var aVow = ['a','e','i','o','u','A','E','I','O','U']
+	return arr.some((x,i)=>arr[i+1]!==undefined?aVow.includes(x[arr[i].length-1]) && aVow.includes(arr[i+1][0]):false);
+}
 ```
 
 []()
