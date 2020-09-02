@@ -379,6 +379,8 @@ function vowelLinks(str) {
 	var aVow = ['a','e','i','o','u','A','E','I','O','U']
 	return arr.some((x,i)=>arr[i+1]!==undefined?aVow.includes(x[arr[i].length-1]) && aVow.includes(arr[i+1][0]):false);
 }
+Optimal solution
+return /[aeiou] [aeiou]/.test(str);
 ```
 
 []()
