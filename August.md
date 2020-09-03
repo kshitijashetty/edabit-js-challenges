@@ -383,24 +383,35 @@ Optimal solution
 return /[aeiou] [aeiou]/.test(str);
 ```
 
-[]()
+[Check if an Array Contains a Given Number](https://edabit.com/challenge/PwpJNJiysvq3AuYJ8)
+```javascript
+function check(arr, el) {
+	return arr.some(x=> x === el);
+}
+```
+
+[Interprime Numbers](https://edabit.com/challenge/Lmxq4ijbxX6pFPdQ6)
 ```javascript
 ```
 
-[]()
+[Lowercase and Uppercase Map](https://edabit.com/challenge/5Yt2CrYdrJvoJFHRt)
+```javascript
+function mapping(letters) {
+	var obj = {}
+	letters.map(letter=> obj[letter]=letter.toUpperCase() );
+	return obj;
+}
+```
+
+[Sum of an Array of Times](https://edabit.com/challenge/BP82XMfoRoREMRxLw)
 ```javascript
 ```
 
-[]()
+[Drinks Allowed?](https://edabit.com/challenge/PwpJNJiysvq3AuYJ8)
 ```javascript
-```
-
-[]()
-```javascript
-```
-
-[]()
-```javascript
+function shouldServeDrinks(age, onBreak) {
+	return age>=18 && !onBreak;
+}
 ```
 
 []()
