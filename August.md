@@ -414,12 +414,28 @@ function shouldServeDrinks(age, onBreak) {
 }
 ```
 
-[]()
+[Decompose Address](https://edabit.com/challenge/xAc7G3AzGgQzLabTe)
 ```javascript
+function decomposeAddress(str) {
+	var arr = str.replace(',','').split(" ");
+	if (arr.length == 7){
+		return [arr[0], arr[1] + ' ' + arr[2], arr[3] + ' ' + arr[4], arr[5], arr[6]];
+	}else{
+		return [arr[0], arr[1] + ' ' + arr[2], arr[3], arr[4], arr[5]];
+	}
+}
 ```
 
-[]()
+[Add up the Numbers from a Single Number](https://edabit.com/challenge/4gzDuDkompAqujpRi)
 ```javascript
+function addUp(num) {
+	return num==0?num:num + addUp(num-1)
+}
+
+Solution 2
+function addUp(num) {
+  return (num * (num + 1))/2;
+}
 ```
 
 []()
