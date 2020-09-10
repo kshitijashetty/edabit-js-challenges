@@ -438,12 +438,34 @@ function addUp(num) {
 }
 ```
 
-[]()
+[Product of All Odd Integers](https://edabit.com/challenge/4LnwAC3kgTctc7r3k?tab=comments&commentId=T9Tb86gm9SMDsYggh)
 ```javascript
+function oddProduct(arr) {
+	return arr.reduce((s,x)=>x%2==0?s:s*x,1);
+}
 ```
 
-[]()
+[Which Generation Are You?](https://edabit.com/challenge/48EJWLhF224na8po3)
 ```javascript
+function generation(x, y) {
+	var obj = {
+		"-3m":	"great grandfather",
+		"-3f":	"great grandmother",
+		"-2m":  "grandfather",
+		"-2f":  "grandmother",
+		"-1m":  "father",
+		"-1f":	"mother",
+		"0m":		"me!",
+		"0f":		"me!",
+		"1m":   "son",
+		"1f": 	"daughter",
+		"2m":		"grandson",
+		"2f":		"granddaughter"	,
+		"3m":		"great grandson",
+		"3f":		"great granddaughter"
+	}	
+	return obj[x+y];
+}
 ```
 
 []()
