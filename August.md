@@ -468,8 +468,21 @@ function generation(x, y) {
 }
 ```
 
-[]()
+[Eat Chocolates](https://edabit.com/challenge/nqNkTkNKcwBH6geSX)
 ```javascript
+function countChocolates(money, cost) {
+	var mon = money.replace(/[^\d.-]/g, '');
+	var price = cost.replace(/[^\d.-]/g, '');
+	var rem, res;
+	res = mon/price;
+	rem = res/3;
+	res = res + rem;
+	while(rem>3){
+		rem = rem/3;
+  	res = res + rem;
+	}
+	return mon<=0||price<=0?"Invalid Input":Math.round(res);
+}
 ```
 
 []()
