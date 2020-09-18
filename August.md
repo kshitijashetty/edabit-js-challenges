@@ -485,8 +485,15 @@ function countChocolates(money, cost) {
 }
 ```
 
-[]()
+[Burglary Series (04): Add its Name](https://edabit.com/challenge/9KEKJG5PZTFmG3Zau)
 ```javascript
+function addName(obj, name, value) {
+	var target = obj;
+	var	source = {};
+  source[name] = value;
+	var newObj = Object.assign(target,source);
+	return target;
+}
 ```
 
 []()
